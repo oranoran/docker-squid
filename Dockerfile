@@ -15,6 +15,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 80F70E11F0F0D5F
 
 COPY squid.conf /etc/squid3/squid.conf
 COPY entrypoint.sh /sbin/entrypoint.sh
+COPY passwords /etc/squid3/passwords
 RUN chmod 755 /sbin/entrypoint.sh
 
 EXPOSE 3128/tcp
